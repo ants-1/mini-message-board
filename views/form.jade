@@ -5,12 +5,12 @@ block content
   h1 New Message Form
   
   form(method="POST" action="/new")
-    div
+    div(class="input-section")
       label(for="author") Author:
-      input(type="text" id="author" name="author")
-    div
+      input(type="text" id="author" name="author" required)
+    div(class="input-section")
       label(for="message") Message:
-      textarea(id="message" name="message" rows="4" cols="50")
-    div
+      textarea(id="message" name="message" rows="4" cols="50" required)
+    div(class="input-section")
       button(type="submit") Submit
 

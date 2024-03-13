@@ -4,6 +4,9 @@ block content
   h1= title
   
   each message in messages
-    p #{message.user}: #{message.text}
+    div(class="message-board")
+      p(class="message") #{message.user}:
+      p #{message.text}
+      p #{message.added}
   
-  a(href="/new") Go to Form
+  a(href="/new" class="send-btn") Send Message
